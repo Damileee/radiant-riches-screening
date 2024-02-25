@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from '../styles/Page.module.scss'
+import styles from "../styles/Page.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +14,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
-      <main>
-        <div className={styles.title}>Hello</div>
+      <main className={styles.main}>
+        <h1 className={styles.heading_text}>Best Website builders in the US</h1>
+        <div className={styles.main_span_container}>
+          <div className={styles.main_span}>
+            <span className={styles.main_first_span}>
+              <img src="lastUpdateIcon.svg" alt="updated icon" />
+              <span>Last Updated - February 22,2020</span>
+            </span>
+            <span className={styles.main_second_span}>
+              <img src="advertIcon.svg" alt="advert icon" />
+              <span>Advertising Disclosure</span>
+            </span>
+          </div>
+          <div className={styles.main_third_span}>
+            <span>Top Relevant</span>
+            <img src="arrowIcon.svg" alt="tuggle icon" />
+          </div>
+        </div>
+        <div className={styles.main_second_span_section}>
+          <span>Tools</span>
+          <span>AWS Builder</span>
+          <span>Start Build</span>
+          <span>Build Supplies</span>
+          <span>Tooling</span>
+          <span>BlueHosting</span>
+        </div>
       </main>
     </>
   );
