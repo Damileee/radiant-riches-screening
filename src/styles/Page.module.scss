@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2.5rem 18rem;
+  padding: 2.5rem 19rem;
   min-height: 100vh;
 }
 
@@ -39,13 +39,30 @@
 .main_second_span_section {
   gap: 1rem;
   display: flex;
-  margin-top: 1rem;
+  margin: 1.2rem 0;
+  flex-wrap: wrap;
 }
 .main_second_span_section span {
   background: white;
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  padding: 0.5rem 2.5rem 0.5rem 1.2rem;
   border-radius: 12px;
   font-size: 13px;
   color: #4B5665;
   cursor: pointer;
+}
+
+.main_third_span_section {
+  color: #5C6874;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  span {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    flex-direction: row;
+  }
 }
