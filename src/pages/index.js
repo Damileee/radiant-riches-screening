@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "../styles/Page.module.scss";
+import Features from "@/components/Features";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +40,30 @@ export default function Home() {
           <span>Build Supplies</span>
           <span>Tooling</span>
           <span>BlueHosting</span>
+        </div>
+        <div className={styles.main_third_span_section}>
+          <span>
+            <p>Home</p>
+            <img src="nextArrowIcon.svg" alt="next arrow icon" />
+          </span>
+          <span>
+            <span>Hosting for all</span>
+            <img src="nextArrowIcon.svg" alt="next arrow icon" />
+          </span>
+          <span>
+            <span>Hosting</span>
+            <img src="nextArrowIcon.svg" alt="next arrow icon" />
+          </span>
+          <span>
+            <span>Hosting6</span>
+            <img src="nextArrowIcon.svg" alt="next arrow icon" />
+          </span>
+          <span>
+            <span>Hosting5</span>
+          </span>
+        </div>
+        <div>
+          <Features />
         </div>
       </main>
     </>
