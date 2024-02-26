@@ -58,31 +58,36 @@ const Features = () => {
   );
 };
 
-const FeatureComponent = ({ commonImageSrc, svgSrc, svgAlt, id, imageP, data, data2, h1, strongText }) => (
-  <div className={styles.feature__container}>
-    <div className={styles.feature__id}>{id}</div>
-    
-    {svgSrc && svgAlt && (
-      <div className={styles.feature__tag}>
-        <img src={svgSrc} alt="icon" />
-        <span>{svgAlt}</span>
-      </div>
-    )}
+const FeatureComponent = ({ commonImageSrc, svgSrc, svgAlt, id, imageP, data, data2, h1, strongText }) => {
+  const hasSvg = svgSrc && svgAlt;
 
-    <div>
-      <img src={commonImageSrc} alt="Common Image system" />
-      <span>{imageP}</span>
+  return (
+    <div className={`${styles.feature__container} ${!hasSvg && styles.feature__noSvg}`}>
+      <div className={styles.feature__id}>{id}</div>
+      
+      {hasSvg && (
+        <div className={styles.feature__tag}>
+          <img src={svgSrc} alt="icon" />
+          <span>{svgAlt}</span>
+        </div>
+      )}
+
+      <div className={styles.feature_commonImg}>
+        <img src={commonImageSrc} alt="Common Image system" />
+        <span>{imageP}</span>
+      </div>
+      
+      <div className={styles.feature__data}>
+        <strong>{strongText}</strong>
+        <span>{data}</span>
+        <h1>{h1}</h1>
+        <p>{data2}</p>
+        <span>Show more</span>
+        <img src="arrowDownIcon.svg" alt="arrow down icon" />
+      </div>
     </div>
-    
-    <div className={styles.feature__data}>
-      <strong>{strongText}</strong>
-      <span>{data}</span>
-      <h1>{h1}</h1>
-      <p>{data2}</p>
-      <span>Show more</span>
-      <img src="arrowDownIcon.svg" alt="arrow down icon" />
-    </div>
-  </div>
-);
+  );
+};
+
 
 export default Features;
