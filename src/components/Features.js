@@ -34,6 +34,14 @@ const Features = () => {
       h1: "Main highlights",
       data2: "[What You Get]: Receive the WixPro website builder suite, access to premium design templates, an extensive library of widgets and apps, and detailed step-by-step guides.",
     },
+    {
+      id: 4,
+      imageP: "Builder 1",
+      strongText: "WixPro 72-Inch Responsive Website Builder- ",
+      data: "Comprehensive Digital Platform Creation Tool, Streamlined Design Interface for Professional Websites and Online Stores (Black/Blue)",
+      h1: "Main highlights",
+      data2: "[What You Get]: Receive the WixPro website builder suite, access to premium design templates, an extensive library of widgets and apps, and detailed step-by-step guides.",
+    },
   ];
 
   return (
@@ -62,28 +70,30 @@ const FeatureComponent = ({ commonImageSrc, svgSrc, svgAlt, id, imageP, data, da
   const hasSvg = svgSrc && svgAlt;
 
   return (
-    <div className={`${styles.feature__container} ${!hasSvg && styles.feature__noSvg}`}>
-      <div className={styles.feature__id}>{id}</div>
-      
-      {hasSvg && (
-        <div className={styles.feature__tag}>
-          <img src={svgSrc} alt="icon" />
-          <span>{svgAlt}</span>
-        </div>
-      )}
+    <div className={styles.feature__main_container}>
+      <div className={`${styles.feature__container} ${!hasSvg && styles.feature__noSvg}`}>
+        <div className={styles.feature__id}>{id}</div>
+        
+        {hasSvg && (
+          <div className={styles.feature__tag}>
+            <img src={svgSrc} alt="icon" />
+            <span>{svgAlt}</span>
+          </div>
+        )}
 
-      <div className={styles.feature_commonImg}>
-        <img src={commonImageSrc} alt="Common Image system" />
-        <span>{imageP}</span>
-      </div>
-      
-      <div className={styles.feature__data}>
-        <strong>{strongText}</strong>
-        <span>{data}</span>
-        <h1>{h1}</h1>
-        <p>{data2}</p>
-        <span>Show more</span>
-        <img src="arrowDownIcon.svg" alt="arrow down icon" />
+        <div className={styles.feature_commonImg}>
+          <img src={commonImageSrc} alt="Common Image system" />
+          <span>{imageP}</span>
+        </div>
+        
+        <div className={styles.feature__data}>
+          <strong>{strongText}</strong>
+          <span>{data}</span>
+          <h1>{h1}</h1>
+          <p>{data2}</p>
+          <span>Show more</span>
+          <img src="arrowDownIcon.svg" alt="arrow down icon" />
+        </div>
       </div>
     </div>
   );
