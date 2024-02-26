@@ -1,0 +1,36 @@
+.feature__container {
+    display: flex;
+}
+
+.feature__tag {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    width: 136px;
+    height: 34px;
+    color: #FFFFFF;
+    background-color: #FF7724;
+    justify-content: center;
+    gap: 5px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    
+}
+
+.feature__data {
+    // font-size: 16px;
+    // font-weight: 700;
+    // line-height: 24px;
+    // letter-spacing: 0em;
+    // text-align: left;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 490px;
+
+}
